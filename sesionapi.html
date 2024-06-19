@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOS SP - Inicio de Sesión</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/sesion.css">
+    <link rel="icon" href="ruta/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="imagen/moto8.jpeg" alt="Imagen del encabezado">
+                <h1>MOTOS SP</h1>
+            </div>
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li><a href="inicio.html" class="active">Inicio</a></li>
+                        <li><a href="Productos.html">Productos</a></li>
+                        <li><a href="Carrito.html">Carrito</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                        <li><a href="sesion.html"class="active">Inicio Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login">
+            <h2>Inicio de Sesión</h2>
+            <form method="post" action="procesar_sesion.php" onsubmit="return validarFormulario()">
+                <div>
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+
+        <section class="api">
+            <h2>Conexión a API</h2>
+            <div id="posts-container" class="posts-container">
+                <!-- Aquí se insertarán los datos de la API -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: speluffo23@gmail.com</p>
+        <p>Derechos de autor &copy; 2024 Tu Tienda</p>
+    </footer>
+</body>
+</html>
+    

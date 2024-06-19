@@ -1,0 +1,142 @@
+/* Estilos para el menú de categorías */
+#categoriasMenu {
+    position: center;
+    top: 0;
+    left: 0;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    padding: 20px;
+    background-color:#c3edf3; /* Color de fondo del menú */
+    color: rgb(58, 55, 55);
+    text-shadow: 4px 4px 8px rgba(1, 5, 5, 0.5);
+    margin-top: 50px; /* Reducir el margen superior para que el h2 quede más cerca de las imágenes */
+}
+
+#categoriasMenu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#categoriasMenu nav ul li {
+    margin-bottom: 40px;
+}
+
+#categoriasMenu nav ul li a {
+    text-decoration:dotted ;
+    color: #333;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#categoriasMenu nav ul li a.active {
+    font-weight: bold; /* Cambia el peso de la fuente para resaltar */
+    color: #2600ff; /* Cambia el color del texto para resaltar */
+}
+/* Estilos para los productos destacados */
+#productosDestacados {
+    background-color: #c3edf3;;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 50px; /* Ajusta el margen superior para dejar espacio para el encabezado */
+}
+
+.product {
+    width: 300px; /* Ajusta el ancho del producto */
+    border: 2px solid #88b422; /* Aumenta el grosor del borde */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block; /* Alinea los productos en línea */
+}
+
+.product h2 {
+    
+    color: rgb(58, 55, 55);
+    text-shadow: 4px 4px 8px rgba(1, 5, 5, 0.5);
+    margin-top: 50px; /* Reducir el margen superior para que el h2 quede más cerca de las imágenes */
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 5px solid #cccccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.product-images {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.product-images img {
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para las miniaturas */
+.thumbnail-images {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.thumbnail-images .thumbnail {
+    width: 20%;
+    cursor: pointer;
+}
+
+.thumbnail-images img {
+    width: 20%;
+    cursor: pointer;
+}
+
+.thumbnail-images .thumbnail:hover,
+.thumbnail-images img:hover {
+    border: 2px solid #485ac9;
+}
+
+
+.main-image {
+    z-index: 1;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    transition: transform 0.3s, border-radius 0.3s; /* Agrega transición al agrandar y redondear */
+}
+
+.product img:hover {
+    z-index: 9999; /* Asegura que la imagen agrandada esté por encima de las otras */
+    transform: scale(2.2); /* Agranda la imagen al pasar el mouse */
+    border-radius: 2px; /* Aumenta el radio de las esquinas al pasar el mouse */
+
+}
+
+.product h2 {
+    position: relative; /* Cambiar a posición relativa */
+    z-index: 2; /* Asegurar que el h2 esté por encima de las miniaturas */
+}
+
+
+#categoriasMenu li:hover a {
+
+    transform: scale(1.2); /* Ajusta el valor de escala según sea necesario */
+
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+
+

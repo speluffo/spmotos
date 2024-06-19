@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOS SP - Contacto</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="icon" href="ruta/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="imagen/moto8.jpeg" alt="Imagen del encabezado">
+                <h1>MOTOS SP</h1>
+            </div>
+            <div class="menu-container">
+                <nav>
+                    <ul>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="Productos.html">Productos</a></li>
+                        <li><a href="Carrito.html">Carrito</a></li>
+                        <li><a href="Contacto.html"class="active">Contacto</a></li>
+                        <li><a href="sesion.html">Inicio Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>¡Gracias por interesarte en nuestros productos! Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros.</p>
+            <form method="post" action="enviar_correo.php">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <section class="location">
+            <h2>Ubicación</h2>
+            <!-- Aquí puedes agregar el mapa de ubicación de Google -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.286015258224!2d-122.40261348510236!3d37.78414617975499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e60b8a5d9a7%3A0x87a28a60cebe154d!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1635426560191!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: speluffo23@gmail.com</p>
+        <p>Derechos de autor &copy; 2024 Tu Tienda</p>
+    </footer>
+</body>
+</html>
