@@ -25,10 +25,30 @@ header h1 {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(17, 198, 74);
-    text-shadow: 20px 20px 4px rgba(8, 8, 8, 0.5);
-    font-size: 10em; /* Ajusta el tamaño según tu necesidad */
-    font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente aquí */
+    color: rgb(246, 250, 248);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1.8);
+    font-size: 10em;
+    font-family: Times, serif;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 5em; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+        top: 30%;
+    }
+    
+    nav ul {
+        flex-direction: column; /* Hacer el menú vertical en pantallas pequeñas */
+    }
+    
+    nav ul li {
+        margin: 5px 0; /* Espaciado entre elementos del menú en pantallas pequeñas */
+    }
+    
+    .product {
+        width: 100%; /* Productos ocupan todo el ancho en pantallas pequeñas */
+    }
 }
 
 /* Estilos para el menú */
@@ -109,4 +129,31 @@ footer {
 footer p {
     margin: 7px 0;
     font-size: 18px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 4em; /* Ajuste el tamaño del título en dispositivos móviles */
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    nav ul li a {
+        font-size: 24px; /* Ajusta el tamaño del texto del menú en dispositivos móviles */
+    }
+    
+    .product {
+        width: 100%; /* Los productos ocupan todo el ancho de la pantalla en dispositivos móviles */
+    }
+    
+    .product img:hover {
+        transform: scale(1.2); /* Reduce el tamaño de escala en dispositivos móviles */
+    }
 }
