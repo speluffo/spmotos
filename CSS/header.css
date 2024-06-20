@@ -26,9 +26,9 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(246, 250, 248);
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1.8);
-    font-size: 10em;
-    font-family: Times, serif;
+    text-shadow: 12px 12px 20px rgba(2, 8, 0, 1.8); /* Ajusta estos valores para mejorar el sombreado */
+    font-size: 10em; /* Ajusta el tamaño según tu necesidad */
+    font-family: Times, serif; /* Puedes cambiar la fuente aquí */
 }
 
 /* Ajustes para dispositivos móviles */
