@@ -1,37 +1,39 @@
 /* Estilos para el header */
 header {
-    header 
     position: relative;
     width: 100%;
-    height: 300px; /* Puedes ajustar la altura según tus necesidades */
-
-   /* background-color: transparent;
+    height: auto;
+    overflow: hidden;
     color: #fff;
-    padding: 5px;
     text-align: center;
+}
+
+header .logo-container {
     position: relative;
-    */
-}
-
-header img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
-h1 {
+header .logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header h1 {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 125px;
+    color: rgb(17, 198, 74);
+    text-shadow: 20px 20px 4px rgba(8, 8, 8, 0.5);
+    font-size: 10em; /* Ajusta el tamaño según tu necesidad */
+    font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente aquí */
 }
 
 /* Estilos para el menú */
 .menu-container {
-    background-color: #333; /* Cambia este color según tus necesidades */
+    background-color: #333;
     padding: 10px;
 }
 
@@ -41,7 +43,6 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin-top: 0;
 }
 
 nav ul li {
