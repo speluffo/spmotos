@@ -20,6 +20,15 @@ header .logo-container img {
     display: block;
 }
 
+header .logo-container .logo {
+    position: absolute;
+    top: 1%;
+    left: 40%;
+    transform: translate(-30%, -10%);
+    width: 500px; /* Ajusta el tamaño del logo según tu necesidad */
+    height: auto;
+}
+
 header h1 {
     position: absolute;
     top: 40%;
