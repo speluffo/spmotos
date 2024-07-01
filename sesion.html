@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/sesion.css">
     <link rel="icon" href="ruta/favicon.ico" type="image/x-icon">
+    <script>
+        function validarFormulario() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (usuario === "" || contrasena === "") {
+                errorMessage.style.display = "block";
+                errorMessage.textContent = "Por favor, complete todos los campos.";
+                return false;
+            }
+
+            errorMessage.style.display = "none";
+            return true;
+        }
+
+        // Función para obtener datos de la API
+        async function obtenerDatosAPI() {
+            try {
+                const response = await fetch('URL_DE_TU_API');
+                const data = await response.json();
+                const postsContainer = document.getElementById('posts-container');
+                
+                data.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('post');
+                    postElement.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p>${post.body}</p>
+                    `;
+                    postsContainer.appendChild(postElement);
+                });
+            } catch (error) {
+                console.error('Error al obtener los datos de la API:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', obtenerDatosAPI);
+    </script>
 </head>
 <body>
     <header>
@@ -22,7 +61,7 @@
                         <li><a href="Productos.html">Productos</a></li>
                         <li><a href="Carrito.html">Carrito</a></li>
                         <li><a href="Contacto.html">Contacto</a></li>
-                        <li><a href="sesion.html"class="active">Inicio Sesión</a></li>
+                        <li><a href="sesion.html" class="active">Inicio Sesión</a></li>
                     </ul>
                 </nav>
             </div>

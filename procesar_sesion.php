@@ -1,17 +1,17 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Procesar los datos del formulario
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
 
-    // Aquí puedes agregar la lógica para validar el usuario y la contraseña.
-    // Por ejemplo, podrías comparar con valores hardcodeados o hacer una consulta a una base de datos.
+    // Aquí puedes agregar la lógica para autenticar al usuario
 
-    if ($usuario === 'admin' && $contrasena === '12345') {
-        echo "Inicio de sesión exitoso. ¡Bienvenido, $usuario!";
-    } else {
-        echo "Usuario o contraseña incorrectos.";
-    }
+    // Redirigir a otra página después de iniciar sesión
+    header('Location: index.html');
+    exit();
 } else {
-    echo "Método de solicitud no permitido.";
+    // Si el método no es POST, muestra un error
+    http_response_code(405);
+    echo "Método no permitido";
 }
 ?>
